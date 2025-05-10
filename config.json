@@ -1,0 +1,5 @@
+{
+    "dataset_path": "dataset.bin",
+    "symbols_path": "symbols.json",
+    "mode": "B"
+}
