@@ -1,4 +1,4 @@
-import struct, random, sys
+import struct, random, sys, json
 
 seed = int(sys.argv[1])
 hours = int(sys.argv[2])
@@ -10,6 +10,10 @@ account_ids = [random.randint(0, 100) for _ in range(random.randint(10, 1000))]
 user_ids = [
     random.randint(0, 100) for _ in range(random.randint(1, min(100, len(account_ids))))
 ]
+
+symbols = ["BTCUSD", "ETHUSD", "LTCUSD", "XRPUSD"]
+with open("symbols.json", "w") as file:
+    json.dump(symbols, file)
 
 print(user_ids)
 
